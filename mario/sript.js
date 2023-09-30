@@ -1,5 +1,7 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const scoreElement = document.getElementById('score');
+let score = 0;
 
 const jump = () => {
     mario.classList.add('jump');
@@ -8,6 +10,9 @@ const jump = () => {
         mario.classList.remove('jump');
 
     }, 500);
+
+    score += 10;
+    scoreElement.textContent = score;
 }
 
 const loop = setInterval(() => {
